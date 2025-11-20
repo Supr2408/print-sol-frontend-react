@@ -1,7 +1,9 @@
-console.log("API_BASE_URL =", API_BASE_URL);
+
 import React, { useEffect, useState } from "react";
 import { auth, db, firebase } from "./firebase";
 import { API_BASE_URL } from "./config";
+console.log("Loaded backend URL =>", API_BASE_URL);
+
 import Header from "./components/layout/Header";
 import LoginScreen from "./components/auth/LoginScreen";
 import DashboardHeader from "./components/dashboard/DashboardHeader";
