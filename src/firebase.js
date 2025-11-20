@@ -4,13 +4,13 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD5nB2VkRcG7Rhy_DsbPEstHKY_c6dJMvk",
-  authDomain: "printingsol-9d9a5.firebaseapp.com",
-  projectId: "printingsol-9d9a5",
-  storageBucket: "printingsol-9d9a5.appspot.com",
-  messagingSenderId: "440516264991",
-  appId: "1:440516264991:web:f8e9eec3dccd8beb3c412a",
-  measurementId: "G-M20ZFH5JZ4",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = firebase.apps.length
@@ -20,7 +20,7 @@ const app = firebase.apps.length
 export const auth = app.auth();
 export const db = app.firestore();
 
-// 🔹 export firebase namespace too
+// export firebase namespace too
 export { firebase };
 
 export default app;
