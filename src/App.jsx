@@ -1,3 +1,4 @@
+console.log("API_BASE_URL =", API_BASE_URL);
 import React, { useEffect, useState } from "react";
 import { auth, db, firebase } from "./firebase";
 import { API_BASE_URL } from "./config";
