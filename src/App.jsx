@@ -264,7 +264,7 @@ function App() {
       const token = await user.getIdToken(true);
 
       // 1. Create Razorpay order
-      const res = await fetch(`${API_BASE_URL}/payments/create-order`, {
+      const res = await fetch(`${API_BASE_URL}/api/payments/create-order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -297,7 +297,7 @@ function App() {
         handler: async function (response) {
           try {
             const verifyRes = await fetch(
-              `${API_BASE_URL}/payments/verify`,
+              `${API_BASE_URL}/api/payments/verify`,
               {
                 method: "POST",
                 headers: {
