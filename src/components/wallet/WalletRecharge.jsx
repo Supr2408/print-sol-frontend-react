@@ -64,7 +64,7 @@ const WalletRecharge = ({ user }) => {
         handler: async function (response) {
           try {
             const verifyRes = await fetch(
-              `${API_BASE_URL}/payments/verify`,
+              `${API_BASE_URL}/api/payments/verify`,
               {
                 method: "POST",
                 headers: {
